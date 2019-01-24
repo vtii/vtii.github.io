@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css?family=Parisienne');
+
+html,
+body {
+	font-size: 1em;
+}
+
+.headText {
+	background-color: #343a40;
+	color: white;
+}
+
+.jumbotron {
+	margin-bottom: unset;
+}
+
+.navbar.navbar-expand-lg.navbar-dark.bg-dark.O,
+.footer.mt-auto.py-3.bg-dark.O {
+	border-top: 2px solid orange;
+}
+
+.navbar.navbar-expand-lg.navbar-dark.bg-dark.O.sticky {
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+
+.navImg {
+	width: 50px;
+	border: 2px solid;
+	box-shadow: 0 0 15px 0.1px orange;
+	border-radius: 30px;
+	border-color: orange;
+	margin: 5px 25px 5px 0;
+}
+
+.navImg:hover {
+	cursor: pointer;
+}
+
+.btn.btn-secondary.dropdown-toggle.D {
+	border: unset;
+	margin: 2px 4px 0 4px;
+	background-color: #343a40;
+}
+
+.made {
+	font-family: "Parisienne", cursive;
+	padding: 8px 12px;
+	text-align: center;
+	font-size: calc(16px + 5.5vh);
+	width: auto;
+}
+
+.orangeText {
+	color: orange;
+	text-shadow: 1px 1px #343a40;
+}
+
+.carousel-caption.d-none.d-md-block.D {
+	background-color: #343a40;
+	border-radius: 10px;
+	border: 2px solid orange;
+}
+
+.postInfo {
+	background-color: #343a40;
+	text-decoration: none;
+	color: orange;
+	border-radius: 5px;
+	width: 180px;
+	height: 32px;
+	text-align: center;
+	padding: 6px 16px;
+	font-weight: 100;
+	font-size: 0.8em;
+	transition: 0.5s;
+}
+
+a.postInfo:hover {
+	text-decoration: none;
+	color: white;
+}
+
+.carouselImg {
+	align-self: center;
+	width: 100%;
+}
+
+/* for table generator */
+
+.tg {
+	margin-bottom: 300px;
+}
+
+footer {
+	/* position: fixed; */
+	bottom: 0;
+	width: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button { /* remove spinner on input type=[number] */
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+table {
+	margin: 0 auto;
+	border: 1px solid white;
+}
+
+th,
+tr,
+td {
+	color: #ffffff;
+	background-color: #343a40;
+}
+
+.inputLabel {
+	margin: 4px 0 4px;
+	width: 140px;
+	border-top: 1px solid #343a40;
+	border-left: 1px solid #343a40;
+	border-bottom: 1px solid #343a40;
+}
+
+.numInp {
+	margin: 4px 4px 4px 0;
+	border-top: 1px solid #343a40;
+	border-right: 1px solid #343a40;
+	border-bottom: 1px solid #343a40;
+	text-align: center;
+}
+
+.inputLabel,
+.numInp,
+.createTable {
+	padding: 4px 16px;
+	height: 34px;
+}
+
+.createTable {
+	border: 1px solid #343a40;
+	justify-content: right;
+	width: 250px;
+	transition: 0.5s;
+	color: orange;
+	background-color: #343a40;
+}
+
+.createTable:hover {
+	color: white;
+	cursor: pointer;
+}
+
+.carouselImg {
+	align-self: center;
+	width: 100%;
+}
