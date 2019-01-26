@@ -17,8 +17,8 @@ let end = null;
 let interval = null;
 
 function handle(delta) {
-	let animationInterval = 10; //lower is faster
-	let scrollSpeed = 20; //lower is faster
+	let animationInterval = 12; //lower is faster
+	let scrollSpeed = 12; //lower is faster
 
 		if (end == null) {
 		end = $(window).scrollTop();
@@ -82,3 +82,4 @@ $(".rows").on("click", (e) => {
 $(".columns").on("click", (e) => {
 	e.currentTarget.select();
 });
+

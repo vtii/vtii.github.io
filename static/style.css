@@ -1,28 +1,71 @@
-@import url('https://fonts.googleapis.com/css?family=Parisienne');
-
-html,
-body {
-	font-size: 1em;
+/* ---------------------------------------------------------------------------------------------------- */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button { /* remove spinner on input type=[number] */
+	-webkit-appearance: none;
+	margin: 0;
+}
+/* ---------------------------------------------------------------------------------------------------- */
+/* for table generator */
+.tg table {
+	margin: 0 auto;
+	border: 1px solid white;
 }
 
-.headText {
+.tg th,
+.tg tr,
+.tg td {
+	color: #ffffff;
 	background-color: #343a40;
+}
+
+.tg .inputLabel {
+	margin: 4px 0 4px;
+	width: 140px;
+	border-top: 1px solid #343a40;
+	border-left: 1px solid #343a40;
+	border-bottom: 1px solid #343a40;
+}
+
+.tg .numInp {
+	margin: 4px 4px 4px 0;
+	border-top: 1px solid #343a40;
+	border-right: 1px solid #343a40;
+	border-bottom: 1px solid #343a40;
+	text-align: center;
+}
+
+.tg .inputLabel,
+.tg .numInp,
+.tg .createTable {
+	padding: 4px 16px;
+	height: 34px;
+}
+
+.tg .createTable {
+	border: 1px solid #343a40;
+	justify-content: right;
+	width: 250px;
+	transition: 0.5s;
+	color: orange;
+	background-color: #343a40;
+}
+
+.tg .createTable:hover {
 	color: white;
+	cursor: pointer;
 }
-
-.jumbotron {
-	margin-bottom: unset;
-}
-
-.navbar.navbar-expand-lg.navbar-dark.bg-dark.O,
-.footer.mt-auto.py-3.bg-dark.O {
+/* ---------------------------------------------------------------------------------------------------- */
+/* for NAV AND FOOTER */
+.navbar.navbar-expand-lg.navbar-dark.O,
+.footer.py-3.O.mt-5 {
 	border-top: 2px solid orange;
 }
 
-.navbar.navbar-expand-lg.navbar-dark.bg-dark.O.sticky {
+.navbar.navbar-expand-lg.navbar-dark.O.sticky {
 	position: sticky;
 	top: 0;
 	z-index: 1;
+	box-shadow: 0 0.1333333333rem 0.2rem rgba(0,0,0,0.7);
 }
 
 .navImg {
@@ -41,30 +84,88 @@ body {
 .btn.btn-secondary.dropdown-toggle.D {
 	border: unset;
 	margin: 2px 4px 0 4px;
-	background-color: #343a40;
+	background-color: #1b1b1b;
+	color: rgba(255,255,255,.5);
 }
 
-.made {
-	font-family: "Parisienne", cursive;
-	padding: 8px 12px;
-	text-align: center;
-	font-size: calc(16px + 5.5vh);
-	width: auto;
+.btn.btn-secondary.dropdown-toggle.D:hover {
+	color: white;
 }
 
-.orangeText {
+.dropdown-menu.show {
+	background-color: #1b1b1b;
+
+	border-bottom: 1px solid orange;
+	border-left: 1px solid orange;
+	border-right: 1px solid orange;
+	border-top: 1px solid orange;
+
+	margin-top: -2px;
+	margin-left: -1px;
+	border-top-left-radius: 0;
+}
+
+.dropdown-item:hover {
+	background: #1b1b1b;
+	color: white;
+}
+
+.dropdown.show {
+	border-top: 1px solid orange;
+	border-right: 1px solid orange;
+	border-left: 1px solid orange;
+	border-radius: 4px;
+}
+
+.nav-item,
+.dropdown-item {
+	transition: 0.5s;
+}
+
+.orangeText,
+.dropdown-item {
 	color: orange;
-	text-shadow: 1px 1px #343a40;
 }
 
-.carousel-caption.d-none.d-md-block.D {
-	background-color: #343a40;
-	border-radius: 10px;
-	border: 2px solid orange;
+.show > .btn-secondary.dropdown-toggle:focus,
+.btn-secondary:not(:disabled):not(.disabled):active:focus,
+.btn-secondary.focus, .btn-secondary:focus,
+.btn:focus,
+.btn-secondary.focus,
+.btn-secondary:focus {
+	box-shadow: unset;
 }
+/* ---------------------------------------------------------------------------------------------------- */
+
+html,
+body {
+	font-size: 1em;
+	/* background-color: #2b2b2b; */
+	background-image: linear-gradient(to top, #1b1b1b, #242424, #2e2e2e, #383838, #424242);
+	color:white;
+}
+
+.jumbotron.jumbotron-fluid.headText,
+nav,
+footer {
+	background-color: #1b1b1b;
+}
+
+.jumbotron.jumbotron-fluid.headText {
+	margin-bottom: unset;
+}
+
+.headText,
+.carouselHeader,
+.postText,
+.postHeader {
+	color: white;
+}
+
+
 
 .postInfo {
-	background-color: #343a40;
+	background-color: #1b1b1b;
 	text-decoration: none;
 	color: orange;
 	border-radius: 5px;
@@ -82,79 +183,30 @@ a.postInfo:hover {
 	color: white;
 }
 
-.carouselImg {
-	align-self: center;
-	width: 100%;
-}
-
-/* for table generator */
-
-.tg {
-	margin-bottom: 300px;
-}
-
-footer {
-	/* position: fixed; */
-	bottom: 0;
-	width: 100%;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button { /* remove spinner on input type=[number] */
-	-webkit-appearance: none;
-	margin: 0;
-}
-
-table {
-	margin: 0 auto;
-	border: 1px solid white;
-}
-
-th,
-tr,
-td {
-	color: #ffffff;
-	background-color: #343a40;
-}
-
-.inputLabel {
-	margin: 4px 0 4px;
-	width: 140px;
-	border-top: 1px solid #343a40;
-	border-left: 1px solid #343a40;
-	border-bottom: 1px solid #343a40;
-}
-
-.numInp {
-	margin: 4px 4px 4px 0;
-	border-top: 1px solid #343a40;
-	border-right: 1px solid #343a40;
-	border-bottom: 1px solid #343a40;
-	text-align: center;
-}
-
-.inputLabel,
-.numInp,
-.createTable {
-	padding: 4px 16px;
-	height: 34px;
-}
-
-.createTable {
-	border: 1px solid #343a40;
-	justify-content: right;
-	width: 250px;
-	transition: 0.5s;
-	color: orange;
-	background-color: #343a40;
-}
-
-.createTable:hover {
+.card.w-75.mx-auto.mb-4 {
+	background-color: #1b1b1b;
 	color: white;
-	cursor: pointer;
+	border-left: 2px solid orange;
 }
 
-.carouselImg {
+.card-header {
+	border-bottom: 1px solid rgba(255,165,0,.125);
+}
+
+hr {
+	border-top: 1px solid rgba(255,165,0,.125);
+}
+
+/* .carousel-caption.d-none.d-md-block.D {
+	background-color: #1b1b1b;
+	border-radius: 10px;
+	border: 2px solid orange;
+} */
+
+/* .carouselImg {
 	align-self: center;
 	width: 100%;
-}
+} */
+
+
+
