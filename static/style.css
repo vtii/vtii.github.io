@@ -141,7 +141,8 @@ html,
 body {
 	font-size: 1em;
 	/* background-color: #2b2b2b; */
-	background-image: linear-gradient(to top, #1b1b1b, #242424, #2e2e2e, #383838, #424242);
+	background-image: linear-gradient(to top, #005248, #005166, #004980, #44357e, #7c0056);
+	/* background-image: linear-gradient(to top, #1b1b1b, #242424, #2e2e2e, #383838, #424242); */
 	color:white;
 }
 
