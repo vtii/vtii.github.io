@@ -1,4 +1,5 @@
 // function for smooth scroll on page
+/*
 if (window.addEventListener) window.addEventListener('DOMMouseScroll', wheel, false);
 window.onmousewheel = document.onmousewheel = wheel;
 
@@ -42,6 +43,7 @@ function handle(delta) {
 		}, animationInterval);
 	}
 }
+*/
 
 // ----------------------------------------------------------------------------------------------------
 
