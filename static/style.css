@@ -185,7 +185,7 @@ a.postInfo:hover {
 }
 
 .card.w-75.mx-auto.mb-4 {
-	background-color: #1b1b1b;
+	background-color: #1b1b1bcc;
 	color: white;
 	border-left: 2px solid orange;
 }
