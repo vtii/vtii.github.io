@@ -6,27 +6,28 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<!-- CSS -->
+	<!-- CSS and other stuff -->
+	<link rel="shortcut icon" type="image/x-icon" href="./static/favicon.ico" />
+
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
 	 crossorigin="anonymous">
+	
+<link rel="stylesheet" href="./static/prism.css" />
+
 	<link rel="stylesheet" href="./static/style.css">
-	<link rel="shortcut icon" type="image/png" href="./static/favicon.ico">
 
 	<title>vtii</title>
 </head>
 <body>
 
 	<div class="jumbotron jumbotron-fluid headText">
-	<div class="container">
+		<div class="container">
+			
+<h1 class="display-4">Table Generator</h1>
+<p class="lead">Simple JavaScript Table Generator</p>
 
-		
-		<h1 class="display-4">Table Generator</h1>
-		<p class="lead">Simple JavaScript Table Generator</p>
-
-		
+		</div>
 	</div>
-</div>
-
 
 	<nav class="navbar navbar-expand-lg navbar-dark O sticky mb-4">
 	<div class="container">
@@ -52,29 +53,29 @@
 				</li>
 
 				<li class="nav-item">
-					<div class="dropdown">
+					<div class="dropdown dropdownNav">
 						<button class="btn btn-secondary dropdown-toggle D" type="button" id="dropdownMenuButton" data-toggle="dropdown"
 							aria-haspopup="true" aria-expanded="false">
 							Tools
 						</button>
-						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-							<a class="dropdown-item" href="https://vtii.github.io/table_generator">Table Generator</a>
-							<a class="dropdown-item" href="#">Gradient Generator</a>
-							<a class="dropdown-item" href="#">Something else here</a>
+						<div class="dropdown-menu dropdownNav" aria-labelledby="dropdownMenuButton">
+							<a class="dropdown-item dropdownNav" href="https://vtii.github.io/table_generator">Table Generator</a>
+							<a class="dropdown-item dropdownNav" href="#">Gradient Generator</a>
+							<a class="dropdown-item dropdownNav" href="#">Something else here</a>
 						</div>
 					</div>
 				</li>
 
 				<li class="nav-item">
-					<div class="dropdown">
+					<div class="dropdown dropdownNav">
 						<button class="btn btn-secondary dropdown-toggle D" type="button" id="dropdownMenuButton" data-toggle="dropdown"
 							aria-haspopup="true" aria-expanded="false">
 							Other Stuff
 						</button>
-						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-							<a class="dropdown-item" href="https://vtii.github.io/simple-js-clock/">Simple JavaScript Clock (demo)</a>
-							<a class="dropdown-item" href="#">Password Generator</a>
-							<a class="dropdown-item" href="#">Something else here</a>
+						<div class="dropdown-menu dropdownNav" aria-labelledby="dropdownMenuButton">
+							<a class="dropdown-item dropdownNav" href="https://vtii.github.io/simple-js-clock/">Simple JavaScript Clock (demo)</a>
+							<a class="dropdown-item dropdownNav" href="#">Password Generator</a>
+							<a class="dropdown-item dropdownNav" href="#">Something else here</a>
 						</div>
 					</div>
 				</li>
@@ -96,25 +97,197 @@
 
 	
 
-	<div class="container mt-4 tg">
+<div class="container mb-4">
 
-	<h1 class="text-center mb-4"> -WORK IN PROGRESS -<br />JavaScript Table Generator</h1>
+	<div class="d-flex justify-content-between">
+		<p class="postInfo">Published: 26.01.2019</p>
+		<p class="postInfo">Updated: 16.02.2019</p>
+		
+	</div>
+	<hr />
+	<p class="mb-4 postText">
+		This is a table generator tool.<br />
+		To use it, simply type in your <u>row</u>-value and your <u>column</u>-value into the input fields and click <u>Create table</u>.<br />
+		Now when your table is created, you can simply copy your table HTML-Code and paste it into your project in the &lt;table&gt; <u>here</u> &lt;/table&gt; tags.
+	</p>
 
-	<div class="d-flex justify-content-center mb-2">
-		<label class="inputLabel">Rows: </label>
-		<input class="rows numInp" type="number" min="0" value="1">
-	</div>
-	<div class="d-flex justify-content-center mb-2">
-		<label class="inputLabel">Columns: </label>
-		<input class="columns numInp" type="number" min="0" value="1">
-	</div>
-	<div class="d-flex justify-content-center mb-2">
-		<button class="createTable">Create Table</button>
+</div>
+
+
+
+<div class="container mt-4 tg">
+
+<h1 class="text-center mb-4"> - WORK IN PROGRESS -<br />JavaScript Table Generator</h1>
+
+	<div class="row">
+		<div class="col-6">
+
+			<div class="dropdown dropright mb-3">
+				<button class="btn gridButton dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Select by Grid
+				</button>
+				<div class="dropdown-menu tgGridDowpdown" aria-labelledby="dropdownMenuButton">
+					<div class="dropdown-item tgGridDowpdown">
+						<div class="d-flex">
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+						</div>
+
+						<div class="d-flex">
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+						</div>
+
+						<div class="d-flex">
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+						</div>
+
+						<div class="d-flex">
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+						</div>
+
+						<div class="d-flex">
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+						</div>
+
+						<div class="d-flex">
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+						</div>
+
+						<div class="d-flex">
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+						</div>
+
+						<div class="d-flex">
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+						</div>
+
+						<div class="d-flex">
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+						</div>
+
+						<div class="d-flex">
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+							<div class="tableGrid"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="mb-3">
+				<label class="inputLabel">Rows: </label>
+				<input class="rows numInp" type="number" min="0" value="5">
+			</div>
+
+			<div class="mb-3">
+				<label class="inputLabel">Columns: </label>
+				<input class="columns numInp" type="number" min="0" value="3">
+			</div>
+
+			<div class="mb-3">
+				<button class="btn createTable">Create table</button>
+			</div>
+
+
+		</div>
+
+		<div class="col-6">
+			<button class="btn copyBtn" data-toggle="tooltip" data-placement="right" title="Copy to clipboard">Copy</button>
+			<pre class="codeBox"><code class="language-markup specialCode">Your HTML-Code will appear here</code></pre>
+		</div>
+
 	</div>
 
-	<table class="table" border="1" cellpadding="" cellspacing=""></table>
-	</div>
+	<table class="table mt-4" border="1" cellpadding="" cellspacing=""></table>
 
+</div>
 
 
 
@@ -131,12 +304,12 @@
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-	 crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-	 crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-	 crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	
+<script src="./static/prism.js"></script>
+
 	<script src="./static/script.js"></script>
 </body>
 

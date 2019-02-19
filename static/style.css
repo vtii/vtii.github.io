@@ -8,52 +8,81 @@ input::-webkit-inner-spin-button { /* remove spinner on input type=[number] */
 /* for table generator */
 .tg table {
 	margin: 0 auto;
-	border: 1px solid white;
 }
 
 .tg th,
 .tg tr,
 .tg td {
-	color: #ffffff;
-	background-color: #343a40;
+	border: 1px solid white;
+	color: white;
+	background-color: #1b1b1b;
 }
 
 .tg .inputLabel {
 	margin: 4px 0 4px;
 	width: 140px;
-	border-top: 1px solid #343a40;
-	border-left: 1px solid #343a40;
-	border-bottom: 1px solid #343a40;
+	border: 1px solid #1b1b1b;
+	background-color: #1b1b1b;
 }
 
 .tg .numInp {
 	margin: 4px 4px 4px 0;
-	border-top: 1px solid #343a40;
-	border-right: 1px solid #343a40;
-	border-bottom: 1px solid #343a40;
+	background-color: #1b1b1b;
+	border: 1px solid #1b1b1b;
 	text-align: center;
+	color: white;
 }
 
 .tg .inputLabel,
 .tg .numInp,
 .tg .createTable {
 	padding: 4px 16px;
-	height: 34px;
 }
 
-.tg .createTable {
-	border: 1px solid #343a40;
-	justify-content: right;
-	width: 250px;
+
+
+.tg .createTable,
+.tg .gridButton,
+.tg .copyBtn {
 	transition: 0.5s;
 	color: orange;
-	background-color: #343a40;
+	background-color: #1b1b1b;
 }
 
-.tg .createTable:hover {
+.tg .createTable:hover,
+.tg .gridButton:hover,
+.tg .copyBtn:hover {
 	color: white;
+}
+
+.tg .language-markup {
+	height: 200px;
+	background-color: #1b1b1b;
+}
+
+.tg .tableGrid {
+	margin: 5px;
+	width: 15px;
+	height: 15px;
+	border: 1px solid orange;
+	transition: 0.2s;
+}
+
+.tg .tableGrid:hover {
+	background-color: orange;
+	transform: scale(1.4);
 	cursor: pointer;
 }
+
+.tg .dropdown-menu.tgGridDowpdown {
+	background-color: #1b1b1b;
+	border: 1px solid orange;
+}
+
+.tg .dropdown-item.tgGridDowpdown {
+	background-color: #1b1b1b;
+}
+
 /* ---------------------------------------------------------------------------------------------------- */
 /* for NAV AND FOOTER */
 .navbar.navbar-expand-lg.navbar-dark.O,
@@ -92,7 +121,7 @@ input::-webkit-inner-spin-button { /* remove spinner on input type=[number] */
 	color: white;
 }
 
-.dropdown-menu.show {
+.dropdown-menu.show.dropdownNav {
 	background-color: #1b1b1b;
 
 	border-bottom: 1px solid orange;
@@ -105,12 +134,16 @@ input::-webkit-inner-spin-button { /* remove spinner on input type=[number] */
 	border-top-left-radius: 0;
 }
 
-.dropdown-item:hover {
+.dropdown-item:hover.dropdownNav {
 	background: #1b1b1b;
 	color: white;
 }
 
-.dropdown.show {
+.dropdown.dropdownNav {
+	border: 1px solid #ffffff00;
+}
+
+.dropdown.show.dropdownNav {
 	border-top: 1px solid orange;
 	border-right: 1px solid orange;
 	border-left: 1px solid orange;
@@ -118,12 +151,12 @@ input::-webkit-inner-spin-button { /* remove spinner on input type=[number] */
 }
 
 .nav-item,
-.dropdown-item {
+.dropdown-item.dropdownNav {
 	transition: 0.5s;
 }
 
 .orangeText,
-.dropdown-item {
+.dropdown-item.dropdownNav {
 	color: orange;
 }
 
