@@ -139,7 +139,8 @@ input::-webkit-inner-spin-button { /* remove spinner on input type=[number] */
 	color: white;
 }
 
-.dropdown.dropdownNav {
+.dropdown.dropdownNav,
+.nav-link {
 	border: 1px solid #ffffff00;
 }
 
