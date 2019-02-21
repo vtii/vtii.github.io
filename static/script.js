@@ -142,6 +142,16 @@ $(".copyBtn").on("click", (e) => {
 	document.body.appendChild(tempForCopy);
 	tempForCopy.select();
 	tempForCopy.remove();
+
+	$(".btn.copyBtn").tooltip("hide");
+	$(".btn.copyBtn").attr("data-original-title", "Copied");
+	$(".btn.copyBtn").tooltip("show");
+
+	$(".copyBtn").on({
+		mouseleave: () => {
+			$(".btn.copyBtn").attr("data-original-title", "Copy to clipboard");
+		}
+	});
 });
 
 function createGridSelector() {
@@ -165,7 +175,6 @@ function createGridSelector() {
 	$(".dropdown-menu.tgGridDowpdown")[0].innerHTML = selectorHTML;
 };
 createGridSelector();
-
 $(".tableGrid").on({
 	mouseenter: (e) => {
 		let current = e.currentTarget.className.split(" ");
@@ -174,6 +183,7 @@ $(".tableGrid").on({
 
 		let befR = [];
 		let befC = [];
+
 
 		if (row > 0) {
 			for (i = 0; i < row; i++) {
@@ -189,15 +199,12 @@ $(".tableGrid").on({
 			// console.log("all that came before - COL: ", befC);
 		}
 
-		for (let i = 0; i < $(".tableGrid").length; i++) {
-
-			for (let j = -1; j < befR.length; j++) {
-				for (let k = -1; k < befC.length; k++) {
-					$(`.tableGrid.${j+1}_${k+1}`).css("background-color", "orange");
-				}
+		for (let j = -1; j < befR.length; j++) {
+			for (let k = -1; k < befC.length; k++) {
+				$(`.tableGrid.${j+1}_${k+1}`).css("background-color", "orange");
 			}
-
 		}
+
 	},
 	mouseleave: () => {
 		for (let i = 0; i < 10; i++) {
