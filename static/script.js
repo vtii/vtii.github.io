@@ -69,35 +69,43 @@ function createTable() {
 	const colVal = $(".columns").val();
 
 	for (let i = 1; i <= rowVal; i++) {
-		let tr = "\n<tr>\n";
+		let tr = "\n\t<tr>\n";
 		let td = "";
 
 		for (let j = 1; j <= colVal; j++) {
 
 			if (i === 1) { // if j === 1
-				td = `\t<th class="header">${"Header"}</th>\n`;
+				td = `\t\t<th class="header">${"Header"}</th>\n`;
 			} else {
-				td = `\t<td>${"Cell"}</td>\n`;
+				td = `\t\t<td>${"Cell"}</td>\n`;
 			}
-			tr += td
+			tr += td;
 		}
-		tr += "</tr>"
-		tableHTML += tr
+		tr += "\t</tr>";
+		tableHTML += tr;
 	}
 	tableEl[0].innerHTML = tableHTML;
 
 	let temp1 = tableHTML.replace(/</g,"&lt;");
 	let temp2 = temp1.replace(/>/g,"&gt;");
 	let tableHTMLCode = "";
-	tableHTMLCode = temp2.replace(temp2[0], "");
-	$(".specialCode")[0].innerHTML = tableHTMLCode;
+	tableHTMLCode = temp2.replace(temp2[0], "&lt;table&gt;\n");
+	$(".specialCode")[0].innerHTML = tableHTMLCode += "\n&lt;/table&gt;";
 	highlightCode();
 };
 createTable();
 
-$(".createTable").on("click", () => {
+$(".rows").on("input", () => {
 	createTable();
-});
+})
+
+$(".columns").on("input", () => {
+	createTable();
+})
+
+// $(".createTable").on("click", () => {
+// 	createTable();
+// });
 
 $(".rows").on("click", (e) => {
 	e.currentTarget.select();
@@ -129,11 +137,80 @@ $(".copyBtn").on("click", (e) => {
 	selectText($(".specialCode")[0]);
 	document.execCommand("copy");
 	$(".specialCode")[0].selected = false;
-	// lover code is for deselecting selected target, by creating temp-element, selecting it and then deleting it
+	// deselecting selected target, by creating temp-element, selecting it and then deleting it
 	const tempForCopy = document.createElement("input");
 	document.body.appendChild(tempForCopy);
-	// tempForCopy.value = tableHTML;
 	tempForCopy.select();
-	// document.execCommand("copy");
 	tempForCopy.remove();
+});
+
+function createGridSelector() {
+	let selectorHTML = "";
+	for (let i = 0; i < 10; i++) {
+		selectorHTML += `
+		<div class="d-flex">
+			<div class="tableGrid ${i}_0"></div>
+			<div class="tableGrid ${i}_1"></div>
+			<div class="tableGrid ${i}_2"></div>
+			<div class="tableGrid ${i}_3"></div>
+			<div class="tableGrid ${i}_4"></div>
+			<div class="tableGrid ${i}_5"></div>
+			<div class="tableGrid ${i}_6"></div>
+			<div class="tableGrid ${i}_7"></div>
+			<div class="tableGrid ${i}_8"></div>
+			<div class="tableGrid ${i}_9"></div>
+		</div>
+		`
+	}
+	$(".dropdown-menu.tgGridDowpdown")[0].innerHTML = selectorHTML;
+};
+createGridSelector();
+
+$(".tableGrid").on({
+	mouseenter: (e) => {
+		let current = e.currentTarget.className.split(" ");
+		let row = parseInt(current[1][0], 10);
+		let column = parseInt(current[1][2], 10);
+
+		let befR = [];
+		let befC = [];
+
+		if (row > 0) {
+			for (i = 0; i < row; i++) {
+				befR.push(i);
+			}
+			// console.log("all that came before - ROW: ", befR);
+		}
+
+		if (column > 0) {
+			for (i = 0; i < column; i++) {
+				befC.push(i);
+			}
+			// console.log("all that came before - COL: ", befC);
+		}
+
+		for (let i = 0; i < $(".tableGrid").length; i++) {
+
+			for (let j = -1; j < befR.length; j++) {
+				for (let k = -1; k < befC.length; k++) {
+					$(`.tableGrid.${j+1}_${k+1}`).css("background-color", "orange");
+				}
+			}
+
+		}
+	},
+	mouseleave: () => {
+		for (let i = 0; i < 10; i++) {
+			for (let j = 0; j < 10; j++) {
+				$(`.tableGrid.${i}_${j}`).css("background-color", "#1b1b1b");
+			}
+		}
+	}
+});
+
+$(".tableGrid").on("click", (e) => {
+	let current = e.currentTarget.className.split(" ");
+	$(".rows").val(parseInt(current[1][0], 10) + 1);
+	$(".columns").val(parseInt(current[1][2], 10) + 1)
+	createTable();
 });

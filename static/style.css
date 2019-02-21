@@ -70,13 +70,14 @@ input::-webkit-inner-spin-button { /* remove spinner on input type=[number] */
 
 .tg .tableGrid:hover {
 	background-color: orange;
-	transform: scale(1.4);
+	/* transform: scale(1.4); */
 	cursor: pointer;
 }
 
 .tg .dropdown-menu.tgGridDowpdown {
 	background-color: #1b1b1b;
 	border: 1px solid orange;
+	padding: 8px;
 }
 
 .tg .dropdown-item.tgGridDowpdown {
