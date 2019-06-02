@@ -1,177 +1,94 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-	<!-- CSS and other stuff -->
-	<link rel="shortcut icon" type="image/x-icon" href="./static/favicon.ico" />
-
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-	 crossorigin="anonymous">
-	
-	<link rel="stylesheet" href="./static/style.css">
-
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>vtii</title>
+	<link rel="shortcut icon" type="image/x-icon" href="static/favicon.ico" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+	<link rel="stylesheet" href="static/bootstrap.min.css">
+	<link rel="stylesheet" href="static/mdb.min.css">
+	<link rel="stylesheet" href="static/style.css">
 </head>
+
 <body>
-
-	<div class="jumbotron jumbotron-fluid headText">
+	<canvas class="background"></canvas>
+	<div id="mainDiv" class="container-fluid animated fadeIn text-warning border border-warning flex-column flex-center py-5" style="min-height: 100vh;">
 		<div class="container">
-			
-<h1 class="display-4">Welcome to vtii.github.io</h1>
-<p class="lead">This is my open source GitHub Page. Feel free to use everything you find here.</p>
-
-		</div>
-	</div>
-
-	<nav class="navbar navbar-expand-lg navbar-dark O sticky mb-4">
-	<div class="container">
-
-		<a href="https://vtii.github.io/"><img class="navImg" src="https://pbs.twimg.com/profile_images/846418116943007744/YZTRh0XE_400x400.jpg" /></a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02"
-			aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-
-		<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-				<li class="nav-item active">
-					<a class="nav-link" href="https://vtii.github.io/">Home</a>
-				</li>
-
-				<li class="nav-item ">
-					<a class="nav-link" href="https://vtii.github.io/table_generator">Table Generator</a>
-				</li>
-
-				<li class="nav-item ">
-					<a class="nav-link" href="https://vtii.github.io/bla">Test-Post</a>
-				</li>
-
-				<li class="nav-item">
-					<div class="dropdown dropdownNav">
-						<button class="btn btn-secondary dropdown-toggle D" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-							aria-haspopup="true" aria-expanded="false">
-							Tools
-						</button>
-						<div class="dropdown-menu dropdownNav" aria-labelledby="dropdownMenuButton">
-							<a class="dropdown-item dropdownNav" href="https://vtii.github.io/table_generator">Table Generator</a>
-							<a class="dropdown-item dropdownNav" href="#">Gradient Generator (todo)</a>
-							<a class="dropdown-item dropdownNav" href="#">Something else here (todo)</a>
-						</div>
-					</div>
-				</li>
-
-				<li class="nav-item">
-					<div class="dropdown dropdownNav">
-						<button class="btn btn-secondary dropdown-toggle D" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-							aria-haspopup="true" aria-expanded="false">
-							Other Stuff
-						</button>
-						<div class="dropdown-menu dropdownNav" aria-labelledby="dropdownMenuButton">
-							<a class="dropdown-item dropdownNav" href="https://vtii.github.io/simple-js-clock/">Simple JavaScript Clock (demo)</a>
-							<a class="dropdown-item dropdownNav" href="https://vtii.github.io/simple-js-calculator/">Simple JavaScript Calculator (demo)</a>
-							<a class="dropdown-item dropdownNav" href="https://vtii.github.io/omdb/">OMDb</a>
-						</div>
-					</div>
-				</li>
-
-				<li class="nav-item">
-					<a class="nav-link" href="https://github.com/vtii" target="_blank">My GitHub</a>
-				</li>
-
-			</ul>
-			<form class="form-inline my-2 my-lg-0">
-				<input class="form-control mr-sm-2" disabled type="search" placeholder="Search - NOT READY">
-				<button class="btn btn-outline-warning my-2 my-sm-0" disabled type="submit">Search</button>
-			</form>
-		</div>
-
-	</div>
-</nav>
-
-
-	
-
-<div class="container">
-		<div class="main-content">
-			<div class="row mb-3">
-				<div class="col-md-12">
-
-					<div class="card w-75 mx-auto mb-4">
-						<div class="card-header">
-							<span class="">#1 - 24.01.2019</span>
-							<span class="badge badge-pill badge-dark w-10 m-2">2 min read</span>
-						</div>
-						<div class="card-body">
-							<h5 class="card-title">My first post! 🎉</h5>
-							<p class="card-text testT">Yay, I did it. My first post on this page..let's get it started!<br /> But first, let me
-								introduce
-								myself.. and tell you what this page is all about.</p>
-							<a class="btn btn-outline-warning btn-lg float-md-right" href="https://vtii.github.io/first_post">Read more</a>
-						</div>
-					</div>
-
-					<div class="card w-75 mx-auto mb-4">
-						<div class="card-header">#2 ?.?.2019</div>
-						<div class="card-body">
-							<h5 class="card-title">Nothing here yet.</h5>
-							<p class="card-text">Upcoming post.. work in progress</p>
-							<a class="btn btn-outline-warning btn-lg float-md-right disabled" href="#" role="button" aria-disabled="true">Read more</a>
-						</div>
-					</div>
-
-					<div class="card w-75 mx-auto mb-4">
-						<div class="card-header">#3 ?.?.2019</div>
-						<div class="card-body">
-							<h5 class="card-title">Nothing here yet.</h5>
-							<p class="card-text">Upcoming post.. work in progress</p>
-							<a class="btn btn-outline-warning btn-lg float-md-right disabled" href="#" role="button" aria-disabled="true">Read more</a>
-						</div>
-					</div>
-
-					<div class="card w-75 mx-auto mb-4">
-						<div class="card-header">#4 ?.?.2019</div>
-						<div class="card-body">
-							<h5 class="card-title">Nothing here yet.</h5>
-							<p class="card-text">Upcoming post.. work in progress</p>
-							<a class="btn btn-outline-warning btn-lg float-md-right disabled" href="#" role="button" aria-disabled="true">Read more</a>
-						</div>
-					</div>
-
+			<div class="test_container">
+				<div class="logo1 flex-column flex-center">
+					<i class="fas fa-gem fa-3x animated flip delay-2s slow"></i>
 				</div>
+				<div class="title1 flex-center">
+					<p>Welcome to vtii.github.io</p>
+				</div>
+				<div class="plustext flex-center">
+					<p>
+						<span class="lineText">This is my open source GitHub page.</span> <span class="lineText">Feel free to use everything you find here.</span>
+					</p>
+				</div>
+				<div id="nav_home" class="navSelector nav1 flex-column bubble bubble-warning">
+					<i class="fas fa-home"></i><span class="navSelectorText">Home</span>
+				</div>
+				<div id="nav_tools" class="navSelector nav2 flex-column bubble bubble-info">
+					<i class="fas fa-tools"></i><span class="navSelectorText">Tools</span>
+				</div>
+				<div id="nav_howTo" class="navSelector nav3 flex-column bubble bubble-success">
+					<i class="fas fa-brain"></i><span class="navSelectorText">How-To</span>
+				</div>
+				<div id="nav_projects" class="navSelector nav4 flex-column bubble bubble-danger">
+					<i class="fas fa-network-wired"></i><span class="navSelectorText">Projects</span>
+				</div>
+				<div id="nav_other" class="navSelector nav5 flex-column bubble bubble-primary">
+					<i class="fas fa-box-open"></i><span class="navSelectorText">Other</span>
+				</div>
+				<div id="nav_about" class="navSelector nav6 flex-column bubble bubble-default">
+					<i class="fas fa-user"></i><span class="navSelectorText">About</span>
+				</div>
+				<div id="nav_faq" class="navSelector nav7 flex-column bubble bubble-secondary">
+					<i class="fas fa-question"></i><span class="navSelectorText">FAQ</span>
+				</div>
+				<a id="nav_git" class="navSelector nav8 flex-column bubble bubble-white text-warning"href="https://github.com/vtii">
+					<i class="fab fa-github"></i><span class="navSelectorText">GitHub</span>
+				</a>
+				<div class="label">
+					<div>
+						<p class="innerLabel">Latest Uploads</p>
+						<p class="innerText">Links for the five latest things I've uploaded.
+					</div>
+				</div>
+				<a href="#" class="link link1 slide-right slideColor-warning text-warning">
+					<p>I'm the link1 (newest)</p>
+					<i class="fas fa-arrow-right"></i>
+				</a>
+				<a href="#" class="link link2 slide-right slideColor-warning text-warning">
+					<p>- nothing here yet.. -</p>
+					<i class="fas fa-arrow-right"></i>
+				</a>
+				<a href="#" class="link link3 slide-right slideColor-warning text-warning">
+					<p>- nothing here yet.. -</p>
+					<i class="fas fa-arrow-right"></i>
+				</a>
+				<a href="#" class="link link4 slide-right slideColor-warning text-warning">
+					<p>- nothing here yet.. -</p>
+					<i class="fas fa-arrow-right"></i>
+				</a>
+				<a href="#" class="link link5 slide-right slideColor-warning text-warning">
+					<p>- nothing here yet.. -</p>
+					<i class="fas fa-arrow-right"></i>
+				</a>
 			</div>
-
 		</div>
 	</div>
 
-	
-
-
-</div>
-
-
-
-	<footer id="footer" class="footer py-3 O mt-5">
-	<div class="container">
-		<span class="text-muted">
-			<div class="text-center">
-				Built with ❤ by <a class="text-muted" href="https://github.com/vtii" target="_blank">vtii</a>
-			</div>
-		</span>
-	</div>
-</footer>
-
-
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	
-	<script src="./static/script.js"></script>
+	<script type="text/javascript" src="static/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="static/popper.min.js"></script>
+	<script type="text/javascript" src="static/bootstrap.min.js"></script>
+	<script type="text/javascript" src="static/mdb.min.js"></script>
+	<script type="text/javascript" src="static/particles.min.js"></script>
+	<script type="text/javascript" src="static/script.js"></script>
 </body>
 
 </html>
